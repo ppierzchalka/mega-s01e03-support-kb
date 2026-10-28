@@ -1,0 +1,36 @@
+---
+layout: runbook
+title: '#4471 · review of merged date reports'
+owner: support desk
+status: review
+reviewed: 2026-10-28
+signature: 'OpenCode / GPT-6.1 Terra'
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  const { signature } = metadata;
+</script>
+
+# Review of #4471
+
+The desk merged reports with similar subjects, but matching subjects do not establish a common cause. The export groups unique report IDs using the tenant's locale, booking form, and intake channel rather than the browser's intake tag.
+
+<CauseTable ticket={4471} />
+
+## Separate problems
+
+- [Shared parser reads day-first tenant dates month-first](https://github.com/ppierzchalka/mega-s01e03-support-kb/issues/1). The parser group includes five reports the desk read as one-day shifts; investigate those separately before assuming the parser caused them.
+- [Booking-v3 shows a month-first hint for day-first tenants](https://github.com/ppierzchalka/mega-s01e03-support-kb/issues/2). On the form, users follow the hint but the date is interpreted in the tenant's order.
+
+The classification is not proof of the root cause of every individual report. Confirm the one-day-shift cases and reassess the counts if the evidence supports another cause. Merge reports by demonstrated cause, not subject alone; do not edit the accepted decision record in place.
+
+## The queue
+
+The desk received reports for months before the bulk merge. A merged count is not the same thing as the date reports arrived, and the desk continues to work after the export. Refresh the source data before relying on these totals.
+
+<QueueTimeline ticket={4471} />
+
+<RenderStamp {signature} />
