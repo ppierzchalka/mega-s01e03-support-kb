@@ -33,4 +33,8 @@ The desk received reports for months before the bulk merge. A merged count is no
 
 <QueueTimeline ticket={4471} />
 
+## Desk update · 5 October
+
+The support desk closed #4471. Engineering fixed the parser: `fix(dates): parse dd/mm for eu locales`. The booking-v3 hint will not be fixed because the form was retired. The two tickets therefore have different closure outcomes: fixed for the parser and not planned for the retired form.
+
 <RenderStamp {signature} />

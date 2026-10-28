@@ -20,7 +20,7 @@ problems. See the [signed review](/kb/incidents/4471-review) for the separate ti
 and the five one-day-shift reports that need investigation.
 
 <Callout>
-Do not assume that all reports share one cause or that either product fix is complete.
+The desk closed #4471 on 5 October: the parser was fixed; the booking-v3 hint will not be fixed because the form was retired. See the review for both tickets.
 </Callout>
 
 ## What was merged
