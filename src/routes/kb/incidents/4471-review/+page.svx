@@ -4,7 +4,7 @@ title: '#4471 · review of merged date reports'
 owner: support desk
 status: review
 reviewed: 2026-10-28
-signature: 'OpenCode / GPT-6.1 Terra'
+signature: 'v1.eyJzdG9yeSI6Im9mZiIsInN1YiI6IjMyNzgiLCJhdWQiOiJjaGFsbGVuZ2U6d2hhdC1pdC1zaG93cyIsImlhdCI6MTc5MzIxMzcwMCwiZXhwIjoxNzkzMzAwMTAwfQ.3aQCKrb2G_TViiJAdULNyk5ob8qnzWdGgREXl3TYsrE'
 ---
 
 <script>
