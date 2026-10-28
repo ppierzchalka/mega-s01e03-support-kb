@@ -19,12 +19,12 @@
 <p class="sum">
   <strong>{merged.length}</strong> reports merged into #{ticket} ·
   <strong>{groups.length}</strong>
-  {groups.length === 1 ? 'cause' : 'causes'}
+  provisional {groups.length === 1 ? 'classification' : 'classifications'}
 </p>
 
 <table>
   <thead>
-    <tr><th>cause</th><th>reports</th><th>tagged as</th><th>tenants</th><th>seen</th><th></th></tr>
+    <tr><th>classification</th><th>reports</th><th>tagged as</th><th>tenants</th><th>seen</th><th></th></tr>
   </thead>
   <tbody>
     {#each groups as g (g.cause)}
@@ -34,7 +34,7 @@
         <td class="tags">{tags(g)}</td>
         <td>{g.tenants}</td>
         <td>{g.firstSeen} → {g.lastSeen}</td>
-        <td>{g.cause === owner ? `#${ticket}` : 'not this ticket — no ticket of its own'}</td>
+        <td>{g.cause === owner ? `original #${ticket}` : 'different classification — see review'}</td>
       </tr>
     {/each}
   </tbody>

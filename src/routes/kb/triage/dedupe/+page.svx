@@ -16,16 +16,16 @@ and merge every duplicate into it, so engineering sees one thread with a count.
 
 ## The rule
 
-A report is a duplicate when its **subject line matches** the subject of an open ticket
-([decision 0001](/kb/decisions/0001-dedupe-by-subject)):
+A report is a duplicate only when the evidence supports the same underlying cause. This
+is proposed in [decision 0002](/kb/decisions/0002-dedupe-by-cause) to replace the subject-only
+rule in [decision 0001](/kb/decisions/0001-dedupe-by-subject), pending desk approval.
 
-1. lowercase the subject and strip punctuation;
-2. look for an open ticket with the same subject;
-3. found one: merge the report into it. None: open a new ticket.
+1. Read the report and look for matching symptoms and conditions.
+2. Check the tenant locale, form version, channel, and available evidence.
+3. Merge only when the same cause is supported; otherwise keep it separate for investigation.
 
 <Callout>
-Matching on subject is fast and needs no reading. During an incident that matters more than
-anything else.
+Similar subjects can hide different causes. Record uncertainty instead of merging by default.
 </Callout>
 
 ## Try it
@@ -34,4 +34,4 @@ anything else.
 
 ## When you are unsure
 
-Merge. Splitting a ticket later is cheaper than two engineers chasing the same bug.
+Keep the report separate, record what is unknown, and ask the support desk to investigate.

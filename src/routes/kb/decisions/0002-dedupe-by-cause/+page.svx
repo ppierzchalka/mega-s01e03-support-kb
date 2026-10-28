@@ -1,0 +1,25 @@
+---
+layout: runbook
+title: '0002 · Dedupe by supported cause'
+owner: support desk
+status: proposed
+reviewed: 2026-10-28
+signature: 'OpenCode / GPT-6.1 Terra'
+---
+
+<script>
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  const { signature } = metadata;
+</script>
+
+## Context
+
+Decision 0001 merged reports by subject alone. The review of #4471 found that similar subjects can cover different date problems, and that automated classifications can hide uncertain reports.
+
+## Proposed replacement
+
+Use the report details, tenant locale, form version and channel to investigate. Merge only when the evidence supports the same underlying cause. Keep uncertain reports separate and record the missing evidence. Count unique IDs, not duplicate export rows.
+
+This takes more triage time than subject matching but avoids combining unrelated fixes and obscuring their impact. The support desk must approve this proposed replacement; decision 0001 remains unchanged.
+
+<RenderStamp {signature} />

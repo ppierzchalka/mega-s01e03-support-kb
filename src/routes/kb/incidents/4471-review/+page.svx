@@ -25,7 +25,7 @@ The desk merged reports with similar subjects, but matching subjects do not esta
 - [Shared parser reads day-first tenant dates month-first](https://github.com/ppierzchalka/mega-s01e03-support-kb/issues/1). The parser group includes five reports the desk read as one-day shifts; investigate those separately before assuming the parser caused them.
 - [Booking-v3 shows a month-first hint for day-first tenants](https://github.com/ppierzchalka/mega-s01e03-support-kb/issues/2). On the form, users follow the hint but the date is interpreted in the tenant's order.
 
-The classification is not proof of the root cause of every individual report. Confirm the one-day-shift cases and reassess the counts if the evidence supports another cause. Merge reports by demonstrated cause, not subject alone; do not edit the accepted decision record in place.
+The classification is not proof of the root cause of every individual report. The support desk should inspect the original booking date, time, time zone, invite and calendar for R-41202, R-41209, R-41236, R-41344 and R-41620, then reassess the counts if the evidence supports another cause. Merge reports by demonstrated cause, not subject alone; see [the replacement decision](/kb/decisions/0002-dedupe-by-cause).
 
 ## The queue
 
